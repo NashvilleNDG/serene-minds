@@ -1,0 +1,304 @@
+/* ============================================
+   SereneMind Therapy – Responsive Styles
+   Mobile-first considerations, breakpoints
+   ============================================ */
+
+/* --- Tablet (max 992px) --- */
+@media (max-width: 992px) {
+  :root {
+    --size-h1: 42px;
+    --size-h2: 34px;
+    --section-padding: 60px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+  .hero-content { order: 1; }
+  .hero-image-wrap { order: 2; }
+  .hero-desc { margin-left: 0; margin-right: auto; }
+  .hero-buttons { justify-content: flex-start; }
+  .hero-stats { justify-content: flex-start; }
+  .hero-floating-card { right: 50%; transform: translateX(50%); bottom: -20px; }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meet-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .meet-image-wrap { order: 1; }
+  .meet-content { order: 2; }
+  .meet-image { min-height: 400px; max-width: 400px; margin: 0 auto; }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .connect-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .booking-card { max-width: 100%; }
+
+  .final-cta-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .final-cta-content { order: 1; }
+  .final-cta-image-wrap { order: 2; }
+  .final-cta-image { min-height: 300px; }
+
+  .page-hero-title { font-size: 42px; }
+  .about-bio-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-bio-image-wrap { order: 1; }
+  .about-bio-content { order: 2; }
+  .about-bio-image { min-height: 400px; }
+  .credentials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .philosophy-quote { font-size: 18px; }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contact-info-col { order: 1; }
+  .contact-form-col { order: 2; }
+  .contact-book-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .contact-book-visual { order: -1; }
+  .contact-book-calendar-icon { font-size: 48px; }
+
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 72px;
+  }
+  .service-row-alt .service-row-content { order: 1; }
+  .service-row-alt .service-row-image { order: 2; }
+  .service-row-content { padding: 0; }
+  .service-row-image { order: 2; }
+  .img-placeholder { height: 320px; }
+  .approaches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pricing-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    gap: 32px;
+  }
+  .pricing-card-right { order: 2; }
+  .pricing-card-left { order: 1; }
+  .pricing-card-amount { font-size: 64px; }
+  .insurance-cards { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .blog-hero { padding: 80px 0; }
+  .blog-hero-title { font-size: 42px; }
+  .blog-featured-card {
+    grid-template-columns: 1fr;
+  }
+  .blog-featured-image { min-height: 320px; }
+  .blog-featured-image img { min-height: 320px; }
+  .blog-featured-content { padding: 32px 24px; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* --- Mobile nav: show hamburger --- */
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(320px, 100%);
+    height: 100vh;
+    background: #0a0e14;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 80px 24px 24px;
+    gap: 24px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+  .main-nav.is-open { transform: translateX(0); }
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-list .nav-link {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .nav-cta {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 16px;
+  }
+  .nav-phone { justify-content: center; }
+  .header-inner { padding: 12px 24px; }
+}
+
+/* --- Mobile (max 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --size-h1: 36px;
+    --size-h2: 28px;
+    --size-h3: 20px;
+    --section-padding: 48px;
+  }
+
+  .container { padding: 0 20px; }
+
+  .hero { padding-top: 40px; }
+  .hero-title { font-size: 36px; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; text-align: left; }
+  .hero-stats { flex-direction: column; align-items: flex-start; }
+  .hero-image { min-height: 300px; }
+  .hero-floating-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .section-cta .btn { width: 100%; text-align: center; }
+
+  .meet-image { min-height: 340px; max-width: 100%; }
+  .meet-floating-badge { right: 16px; bottom: 16px; padding: 12px 16px; }
+  .meet-languages { max-width: 100%; }
+
+  .testimonial-card { padding: 24px; }
+  .testimonial-quote { font-size: 36px; }
+
+  .accordion-trigger { padding: 16px 20px; font-size: 15px; }
+  .accordion-panel-inner { padding: 0 20px 16px 20px; }
+
+  .connect-inner { gap: 32px; }
+  .final-cta { margin-left: 20px; margin-right: 20px; }
+  .final-cta-buttons { flex-direction: column; }
+  .final-cta-buttons .btn { width: 100%; text-align: center; }
+  .final-cta-image { min-height: 260px; }
+
+  .page-hero-title { font-size: 32px; }
+  .page-hero-subtitle { font-size: var(--size-small); }
+  .about-bio-image { min-height: 340px; }
+  .about-bio-buttons { flex-direction: column; }
+  .about-bio-buttons .btn { width: 100%; text-align: center; }
+  .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .philosophy-quote { font-size: 17px; padding: 0 16px; }
+
+  .contact-form-row-two {
+    grid-template-columns: 1fr;
+  }
+  .contact-book-card { padding: 24px 20px; }
+
+  .service-row { margin-bottom: 56px; }
+  .service-row-title { font-size: 26px; }
+  .img-placeholder { height: 280px; }
+  .approaches-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .approach-card-icon { position: static; margin-bottom: 12px; }
+  .approach-card-title { margin-left: 0; margin-top: 0; }
+  .conditions-tag { padding: 8px 16px; font-size: 13px; }
+
+  .insurance-hero { padding: 80px 0; }
+  .insurance-hero-title { font-size: 42px; }
+  .pricing-card-section { padding-bottom: 56px; }
+  .pricing-card { padding: 24px 20px; border-radius: 16px; }
+  .pricing-card-amount { font-size: 56px; }
+  .pricing-card-period { font-size: 18px; }
+  .insurance-info-title { font-size: 32px; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .benefits-title { font-size: 32px; margin-bottom: 32px; }
+  .insurance-faq-title { font-size: 32px; }
+  .insurance-faq-a { padding-left: 0; }
+  .insurance-cta-title { font-size: 28px; }
+  .insurance-cta-buttons { flex-direction: column; }
+  .insurance-cta-buttons .btn { width: 100%; }
+
+  .blog-hero-title { font-size: 36px; }
+  .blog-featured-title { font-size: 26px; }
+  .blog-featured-content { padding: 24px 20px; }
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .blog-card-image { height: 180px; }
+  .blog-cta-title { font-size: 28px; }
+  .blog-cta-buttons { flex-direction: column; }
+  .blog-cta-buttons .btn { width: 100%; }
+
+  .blog-post-title { font-size: 28px; }
+  .blog-post-body { padding: 32px 20px 0; }
+  .blog-post-cta { padding: 24px 20px; }
+  .blog-post-cta-buttons { flex-direction: column; }
+  .blog-post-cta-buttons .btn { width: 100%; }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+  }
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-legal { justify-content: center; }
+}
+
+/* --- Small mobile (max 480px) --- */
+@media (max-width: 480px) {
+  .logo-text { font-size: 14px; }
+  .logo-cred { display: block; margin-top: 2px; }
+  .hero-badge { font-size: 12px; padding: 6px 12px; }
+  .btn { padding: 12px 24px; font-size: 15px; }
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .main-nav { transition: none; }
+  .service-card { transition: none; }
+  .accordion-panel { transition: none; }
+  .accordion-item.is-open .accordion-panel { transition: none; }
+}
