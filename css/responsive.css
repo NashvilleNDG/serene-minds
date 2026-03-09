@@ -124,6 +124,7 @@
   .blog-featured-image img { min-height: 320px; }
   .blog-featured-content { padding: 32px 24px; }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-blogs-grid { grid-template-columns: repeat(2, 1fr); }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -279,6 +280,7 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .home-blogs-grid { grid-template-columns: 1fr; }
   .blog-card-image { height: 180px; }
   .blog-cta-title { font-size: 28px; }
   .blog-cta-buttons { flex-direction: column; }

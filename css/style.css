@@ -145,7 +145,7 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #0a0e14;
+  background: var(--color-teal);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 .header-inner {
@@ -697,8 +697,8 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
   gap: 12px;
 }
 .social-icon {
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--color-teal);
   color: var(--color-white);
@@ -714,10 +714,27 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
   text-decoration: none;
 }
 .social-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   fill: currentColor;
 }
+/* Connect section: social icons in brand colors */
+.connect-section .social-icon {
+  background: transparent;
+  color: inherit;
+}
+.connect-section .social-icon-facebook { color: #1877F2; }
+.connect-section .social-icon-facebook:hover { color: #0d65d9; background: transparent; opacity: 0.9; }
+.connect-section .social-icon-instagram { color: #E4405F; }
+.connect-section .social-icon-instagram:hover { color: #c13584; background: transparent; opacity: 0.9; }
+.connect-section .social-icon-linkedin { color: #0A66C2; }
+.connect-section .social-icon-linkedin:hover { color: #004182; background: transparent; opacity: 0.9; }
+.connect-section .social-icon-youtube { color: #FF0000; }
+.connect-section .social-icon-youtube:hover { color: #cc0000; background: transparent; opacity: 0.9; }
+.connect-section .social-icon-tiktok { color: #000000; }
+.connect-section .social-icon-tiktok:hover { color: #333; background: transparent; opacity: 0.9; }
+.connect-section .social-icon-pinterest { color: #BD081C; }
+.connect-section .social-icon-pinterest:hover { color: #8c0615; background: transparent; opacity: 0.9; }
 .booking-card {
   background: var(--color-teal);
   color: var(--color-white);
@@ -1944,6 +1961,54 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
 }
 .blog-card-link:hover { text-decoration: underline; }
 
+/* Home page: The Psychiatry Corner (blogs above footer) */
+.home-blogs-section {
+  background: #f8f5f0;
+  padding: 72px 0 80px;
+}
+.home-blogs-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-teal);
+  text-align: center;
+  margin: 0 0 12px 0;
+}
+.home-blogs-subtitle {
+  font-size: var(--size-body);
+  color: var(--color-body);
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+.home-blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.home-blogs-section .blog-card {
+  height: 100%;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.home-blogs-section .blog-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+.blog-card-link-wrap {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+.blog-card-link-wrap:hover .blog-card-link { text-decoration: underline; }
+.home-blogs-cta {
+  text-align: center;
+  margin: 0;
+}
+.home-blogs-cta .btn { min-width: 200px; }
+
 .blog-cta-section {
   background: #0d4a4a;
   padding: 80px 0;
@@ -2677,10 +2742,10 @@ a.contact-card-teal:hover {
   object-fit: contain;
 }
 .footer-logo .logo-avatar { background: rgba(255, 255, 255, 0.2); }
-.footer-logo .logo-cred { color: rgba(255, 255, 255, 0.7); }
+.footer-logo .logo-cred { color: var(--color-white); }
 .footer-tagline {
   font-size: var(--size-body);
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-white);
   margin: 0 0 16px 0;
   max-width: 240px;
 }
@@ -2691,6 +2756,69 @@ a.contact-card-teal:hover {
   border-radius: 8px;
   font-size: 12px;
   font-weight: 600;
+  color: var(--color-white);
+}
+.footer-social {
+  margin-top: 20px;
+}
+.footer-social-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+.footer-social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-white);
+  border-radius: 50%;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.footer-social-link:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  transform: translateZ(0) scale(1.08);
+}
+/* Footer social icons – white */
+.footer-social-list li:nth-child(1) .footer-social-link { color: var(--color-white); }
+.footer-social-list li:nth-child(1) .footer-social-link:hover { color: var(--color-white); background: rgba(255, 255, 255, 0.2); }
+.footer-social-list li:nth-child(2) .footer-social-link { color: var(--color-white); }
+.footer-social-list li:nth-child(2) .footer-social-link:hover { color: var(--color-white); background: rgba(255, 255, 255, 0.2); }
+.footer-social-list li:nth-child(3) .footer-social-link { color: var(--color-white); }
+.footer-social-list li:nth-child(3) .footer-social-link:hover { color: var(--color-white); background: rgba(255, 255, 255, 0.2); }
+.footer-social-list li:nth-child(4) .footer-social-link { color: var(--color-white); }
+.footer-social-list li:nth-child(4) .footer-social-link:hover { color: var(--color-white); background: rgba(255, 255, 255, 0.2); }
+.footer-social-list li:nth-child(5) .footer-social-link { color: var(--color-white); }
+.footer-social-list li:nth-child(5) .footer-social-link:hover { color: var(--color-white); background: rgba(255, 255, 255, 0.2); }
+.footer-social-list li:nth-child(6) .footer-social-link { color: var(--color-white); }
+.footer-social-list li:nth-child(6) .footer-social-link:hover { color: var(--color-white); background: rgba(255, 255, 255, 0.2); }
+.footer-social-link svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: block;
+  fill: currentColor;
+  shape-rendering: geometricPrecision;
+}
+.footer-social-link {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 .footer-heading {
   font-family: var(--font-heading);
@@ -2706,14 +2834,14 @@ a.contact-card-teal:hover {
 }
 .footer-links li, .footer-contact li { margin-bottom: 10px; }
 .footer-links a, .footer-contact a {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-white);
   font-size: var(--size-small);
 }
 .footer-links a:hover, .footer-contact a:hover {
   color: var(--color-white);
   text-decoration: none;
 }
-.footer-contact li { color: rgba(255, 255, 255, 0.85); font-size: var(--size-small); }
+.footer-contact li { color: var(--color-white); font-size: var(--size-small); }
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 20px 0;
@@ -2725,7 +2853,23 @@ a.contact-card-teal:hover {
   flex-wrap: wrap;
   gap: 16px;
 }
-.footer-copy { margin: 0; font-size: var(--size-small); color: rgba(255, 255, 255, 0.7); }
+.footer-bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.footer-copy { margin: 0; font-size: var(--size-small); color: var(--color-white); }
+.footer-credit {
+  margin: 4px 0 0 0;
+  font-size: var(--size-small);
+  color: var(--color-white);
+}
+.footer-credit a {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer-credit a:hover { color: var(--color-gold); text-decoration: underline; opacity: 0.9; }
 .footer-legal {
   list-style: none;
   margin: 0;
@@ -2734,7 +2878,7 @@ a.contact-card-teal:hover {
   gap: 24px;
 }
 .footer-legal a {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-white);
   font-size: var(--size-small);
 }
 .footer-legal a:hover { color: var(--color-white); text-decoration: none; }
