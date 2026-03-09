@@ -1904,6 +1904,16 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
 }
 .btn-featured-cta:hover { text-decoration: none; color: var(--color-white); }
 
+/* Featured card: only title and "Read Article" are links; no underline on hover */
+.blog-featured-section .blog-featured-card .blog-featured-title a {
+  text-decoration: none;
+  color: inherit;
+}
+.blog-featured-section .blog-featured-card .blog-featured-title a:hover {
+  text-decoration: none;
+  color: var(--color-teal);
+}
+
 .blog-grid-section {
   background: var(--color-white);
   padding: 80px 0;
@@ -1958,8 +1968,22 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
   font-weight: 600;
   color: #0d4a4a;
   display: inline-block;
+  text-decoration: none;
 }
-.blog-card-link:hover { text-decoration: underline; }
+.blog-card-link:hover { text-decoration: none; }
+
+/* Blog page grid: only title and "Read More" are links; no underline on hover */
+.blog-grid-section .blog-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.blog-grid-section .blog-card a:hover {
+  text-decoration: none;
+  color: var(--color-teal);
+}
+.blog-grid-section .blog-card-title a:hover { color: var(--color-teal); }
+.blog-grid-section .blog-card-link { color: var(--color-teal); }
+.blog-grid-section .blog-card-link:hover { color: #143d39; }
 
 /* Home page: The Psychiatry Corner (blogs above footer) */
 .home-blogs-section {
@@ -1998,11 +2022,21 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
 }
 .blog-card-link-wrap {
   display: block;
-  text-decoration: none;
   color: inherit;
   height: 100%;
 }
-.blog-card-link-wrap:hover .blog-card-link { text-decoration: underline; }
+/* Only topic title and "Read Article" are links; no underline on hover */
+.home-blogs-section .blog-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.home-blogs-section .blog-card a:hover {
+  text-decoration: none;
+  color: var(--color-teal);
+}
+.home-blogs-section .blog-card-title a:hover { color: var(--color-teal); }
+.home-blogs-section .blog-card-link { color: var(--color-teal); }
+.home-blogs-section .blog-card-link:hover { color: #143d39; }
 .home-blogs-cta {
   text-align: center;
   margin: 0;
