@@ -1,5 +1,5 @@
 /* ============================================
-   SereneMind Therapy – Responsive Styles
+   Serene Minds Psychotherapy – Responsive Styles
    Mobile-first considerations, breakpoints
    ============================================ */
 
@@ -357,6 +357,9 @@
     overflow-y: auto;
   }
   .main-nav.is-open { transform: translateX(0); }
+  .nav-close {
+    display: flex;
+  }
   .nav-list {
     flex-direction: column;
     align-items: stretch;
@@ -372,7 +375,7 @@
     align-items: stretch;
     margin-top: 16px;
   }
-  .nav-phone { justify-content: center; }
+  .nav-phone { justify-content: flex-start; }
   .header-inner { padding: 12px 24px; }
 
   /* --- Tablet/mobile: logo centered in header --- */

@@ -1,5 +1,5 @@
 /* ============================================
-   SereneMind Therapy – Main Styles
+   Serene Minds Psychotherapy – Main Styles
    Design system: teal, gold, cream, semantic HTML
    ============================================ */
 
@@ -220,6 +220,26 @@ a:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
   line-height: 1;
 }
 .nav-toggle:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+.nav-close {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.nav-close:hover { color: var(--color-gold); }
+.nav-close:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
 .hamburger {
   display: block;
   width: 24px;
@@ -2569,6 +2589,7 @@ a.contact-card-teal:hover {
   font-weight: 600;
   color: var(--color-teal);
   margin: 0 0 16px 0;
+  text-align: center;
 }
 .contact-expect-steps {
   list-style: none;

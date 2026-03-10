@@ -1,5 +1,5 @@
 /**
- * SereneMind Therapy – Main JavaScript
+ * Serene Minds Psychotherapy – Main JavaScript
  * Accordion (FAQ) and mobile navigation (hamburger)
  * Vanilla JS, no frameworks.
  */
@@ -46,7 +46,17 @@
       document.body.style.overflow = isOpen ? "" : "hidden";
     });
 
-    // Close menu when clicking a nav link (for anchor or same-page)
+    var closeBtn = document.querySelector(".nav-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+        document.body.style.overflow = "";
+      });
+    }
+
+    // Close menu when clicking a nav link
     nav.querySelectorAll(".nav-link").forEach(function (link) {
       link.addEventListener("click", function () {
         nav.classList.remove("is-open");
